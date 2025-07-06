@@ -51,7 +51,7 @@ const page = () => {
       });
       // Check if the response is ok (status in the range 200-299)
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('Network response was not ok!');
       }
       const data = await response.json();
       setBooks([...books, data]);
