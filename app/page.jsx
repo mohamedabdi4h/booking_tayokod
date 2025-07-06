@@ -49,6 +49,7 @@ const page = () => {
         },
         body: JSON.stringify(form),
       });
+      // Check if the response is ok (status in the range 200-299)
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -59,7 +60,7 @@ const page = () => {
         description: '',
         author: ''
       });
-      
+
     } catch (error) {
       console.error('Error creating booking:', error);
     }
