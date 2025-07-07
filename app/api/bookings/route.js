@@ -12,7 +12,11 @@ export async function GET() {
 export async function POST(req) {
     const { title, description, author } = await req.json();
     try {
+        if(!title || !description || !author) {
+            return NextResponse.json({ error: 'All fields are required' }, { status: 400 });
+        }
         const newBooking = await prisma.booking.create({
+            
             data: {
                 title,
                 description,
