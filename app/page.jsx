@@ -106,15 +106,15 @@ useEffect(()=>{
           <div className="grid gap-4">
             <div className="grid gap-3">
               <Label htmlFor="name-1">Title</Label>
-              <Input id="name-1" name="title" placeholder="Enter title" value={form.title} onChange={handleChange} />
+              <Input id="name-1"required name="title" placeholder="Enter title" value={form.title} onChange={handleChange} />
             </div>
             <div className="grid gap-3">
               <Label htmlFor="username-1">Description</Label>
-              <Input id="username-1" name="description" placeholder="Enter description" value={form.description} onChange={handleChange} />
+              <Input id="username-1" required name="description" placeholder="Enter description" value={form.description} onChange={handleChange} />
             </div>
             <div className="grid gap-3">
               <Label htmlFor="email-1">Author</Label>
-              <Input id="email-1" name="author" placeholder="Enter author" value={form.author} onChange={handleChange} />
+              <Input id="email-1" name="author" placeholder="Enter author" value={form.author} onChange={handleChange} required />
             </div>
           </div>
           <DialogFooter>
