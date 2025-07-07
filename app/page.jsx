@@ -54,6 +54,9 @@ const page = () => {
         throw new Error('Network response was not ok!.');
       }
       const data = await response.json();
+      if(form.title === '' || form.description === '' || form.author === ''){
+        alert("please fill all fields are required")
+      }
       setBooks([...books, data]);
       setForm({
         title: '',
